@@ -1,0 +1,65 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    overflow: hidden;
+}
+.buttonB{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(148, 21, 55);
+    opacity: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+button{
+  
+  padding: 20px;
+  color:#080007;
+  background-color: #0e3e68;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+}
+.popup{
+    padding: 32px 64px;
+    background-color: rgb(214, 189, 189);
+    border: 1px solid black;
+    border-radius: 10px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform-origin: center;
+    transform: translate(-50%, -100%);
+    pointer-events:none;
+    opacity: 0;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, opacity 0.4s ease;
+
+}
+.popup p {
+    margin-bottom: 24px;
+
+}
+.backdrop {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  background: #e90404;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.popup.show{
+  transform: translate(-50%, -50%);
+  opacity: 1;
+  pointer-events: all;
+    
+}
+.backdrop.show{
+  opacity: 0.3;
+  pointer-events: all;
+}
+
+
